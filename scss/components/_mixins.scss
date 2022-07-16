@@ -1,0 +1,15 @@
+@use "../custom" as *;
+
+@mixin gr-gradient($dir) {
+  background: linear-gradient(to $dir, $primary 0%, $primary 80%, rgba($secondary, 0.8,) 100%);
+}
+
+@mixin abs-center-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin ease($duration) {
+  transition: all $duration ease-in-out;
+}

@@ -1,0 +1,30 @@
+@use "../custom" as *;
+
+.about-section {
+  background-color: $auxiliary-color;
+  color: $white;
+}
+
+.about-heading-line {
+  &::before {
+    content: "";
+    width: 10rem;
+    height: 10px;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+  }
+  &::after {
+    content: "";
+    width: 5rem;
+    height: 10px;
+    display: block;
+    background-color: $primary;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+
+.about-p {
+  font-size: 1.2rem;
+}

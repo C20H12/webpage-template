@@ -1,0 +1,27 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.c-nav-menu {
+
+  @include gr-gradient(right);
+
+  li {
+    padding: 0 0.7rem;
+  
+    a {
+      color: $text-color !important;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        color: $secondary !important;
+      }
+    }
+  }
+}
+
+.c-nav-toggle-btn {
+  border: 3px solid $gray-700 !important;
+}

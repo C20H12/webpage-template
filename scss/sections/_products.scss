@@ -1,0 +1,69 @@
+@use "../custom" as *;
+@use "../components/mixins" as *;
+
+.products-section {
+  padding: 4rem 0;
+
+  button {
+    text-transform: capitalize;
+  }
+}
+
+.products-item-box {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
+  margin: .8rem 0;
+  border-top: 3px solid $secondary;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    @include media-breakpoint-down(md) {
+      object-fit: cover;
+    }
+  }
+
+  .products-item-info {
+    background-color: rgba($primary, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    @include abs-center-child;
+
+    .products-item-caption {
+      text-align: center;
+      color: $text-color;
+
+      h4 {
+        display: block;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: $secondary;
+        font-weight: bold;
+        
+      }
+    }
+  }
+
+  &:hover {
+    .products-item-info {
+      opacity: 1;
+      visibility: visible;
+      @include ease(.5s);
+    }
+    img {
+      @include ease(.5s);
+      transform: scale(1.2);
+    }
+  }
+}

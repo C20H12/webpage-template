@@ -1,0 +1,19 @@
+
+$theme-color: #ce2026;
+$main-color: #e3e3e3;
+$text-color: #343a40;
+$text-color-light: #647789;
+$auxiliary-color: #2f2e2e;
+$auxiliary-color-dark: #281717;
+
+$primary: $main-color;
+$secondary: $theme-color;
+
+$accordion-icon-color: $primary;
+$accordion-icon-active-color: $secondary;
+$accordion-icon-width: 1.8rem;
+
+$carousel-control-color: $auxiliary-color;
+$carousel-indicator-active-bg: $auxiliary-color-dark;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
